@@ -101,6 +101,7 @@ iff $n$ is square-free, and for all prime divisors $p$ of $n$, $p-1$ divides $n-
   \item \( \phi (ip) = p \phi(i) \) whenever \( p \) is a prime and it divides \( i \)
   \item \( \sum_{i=1}^n \operatorname{gcd}(i, n) = \sum_{d|n} d \phi(\frac{n}{d}) \)
   \item \( \sum_{i=1}{n} \operatorname{lcm}(i, n) = \frac{n}{2}(\sum_{d|n}(d \phi(d))+1) \)
+  \item $a^{\phi(m)} \equiv 1 \pmod{m}$, if $\operatorname{gcd}(a, m) = 1$
 \end{itemize}
 
 \subsubsection{Mobius function}
@@ -114,9 +115,9 @@ $\phi(n) = \sum_{d|n} \mu(d) \frac{n}{d}$.
 If $f$ is multiplicative, then $\sum_{d|n} \mu(d) f(d) = \prod_{p|n}(1-f(p))$,
 $\sum_{d|n} \mu(d)^2 f(d) = \prod_{p|n} (1+f(p))$.
 \begin{itemize}[noitemsep]
-  \item \[ \sum_{i = 1}^n \sum_{j = 1}^n [gcd(i, j) = 1] = \sum_{k = 1}^n \mu(k) \lfloor \frac{n}{k} \rfloor^2 \]
-  \item \[ \sum_{i = 1}^n \sum_{j = 1}^n gcd(i, j) = \sum_{k = 1}^n k \sum_{l = 1}^{\lfloor \frac{n}{k} \rfloor} \mu(l) \lfloor {\frac{n}{kl}} \rfloor^2 \]
-  \item \[ \sum_{i = 1}^n \sum_{j = 1}^n gcd(i, j) = \sum_{k = 1}^n (\frac{\lfloor \frac{n}{k} \rfloor (1 + \lfloor \frac{n}{k} \rfloor) }{2})^2 \sum_{d | k} \mu (d) kd \]
+  $$ \sum_{i = 1}^n \sum_{j = 1}^n [gcd(i, j) = 1] = \sum_{k = 1}^n \mu(k) \lfloor \frac{n}{k} \rfloor^2 $$
+  $$ \sum_{i = 1}^n \sum_{j = 1}^n gcd(i, j) = \sum_{k = 1}^n k \sum_{l = 1}^{\lfloor \frac{n}{k} \rfloor} \mu(l) \lfloor {\frac{n}{kl}} \rfloor^2 $$
+  $$ \sum_{i = 1}^n \sum_{j = 1}^n gcd(i, j) = \sum_{k = 1}^n (\frac{\lfloor \frac{n}{k} \rfloor (1 + \lfloor \frac{n}{k} \rfloor) }{2})^2 \sum_{d | k} \mu (d) kd $$
 \end{itemize}
 
 \subsubsection{Quadratic Residue.} $(\frac{a}{p})$ is $0$ if $p\mid a$, $1$ if $a$ is a quadratic residue, $-1$ otherwise. Euler: $(\frac{a}{p})=a^{(p-1)/2}\pmod p$ (prime). Jacobi: if $n=p_1^{e_1}\cdots p_k^{e_k}$ then $(\frac{a}{n})=\prod (\frac{a}{p_i})^{e_i}$. 

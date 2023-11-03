@@ -3,7 +3,6 @@
  * Time: O(\log^2 N)
  */
 const int N = 1e5 + 5;
-const int LOGN = 18;
 
 int par[N], nxt[N], in[N], out[N], sz[N], h[N];
 int n, timer;
